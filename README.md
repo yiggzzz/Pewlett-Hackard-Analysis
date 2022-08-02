@@ -40,7 +40,7 @@ ORDER BY e.emp_no;
 SELECT * FROM retirement_titles;
 
 EXAMPLES OF EACH OUTPUT
-![retirees](retirement_titles_output.PNG)
+![retirees](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/retirement_titles_output.png)
 
 ### Unique &  Most Recent Titles Use Partitioning
 #### Get the final list with recent titles, by partitioning the data so that each employee is only included on the list once.
@@ -58,7 +58,7 @@ SELECT * FROM unique_titles;
 
 
 EXAMPLES OF EACH OUTPUT
-![unique](unique_titles_output.PNG)
+![unique](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/unique_titles_output.png)
 
 ### Aggregate Level
 #### In descending order (by date), list the frequency count of employee titles (i.e., how many employees share the same title?)
@@ -73,7 +73,7 @@ ORDER BY count(emp_no) DESC;
 SELECT * FROM retiring_titles;
 
 EXAMPLES OF EACH OUTPUT
-![retirees_emp](retiring_titles_output.PNG)
+![retirees_emp](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/retiring_titles_output.png)
 
 ### Mentorship
 #### Should return the potential mentor’s
@@ -93,7 +93,7 @@ ORDER BY e.emp_no;
 SELECT * FROM mentorship_eligibility;
 
 EXAMPLES OF EACH OUTPUT
-![Mentor](mentorship_output.PNG)
+![Mentor](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/mentorship_output.png)
 
 ### THINGS LEARNED
 * Designing an ERD that applies to the data.
