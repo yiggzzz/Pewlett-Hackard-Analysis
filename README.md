@@ -39,7 +39,7 @@ ORDER BY e.emp_no;
 
 SELECT * FROM retirement_titles;
 
-EXAMPLES OF EACH OUTPUT
+##### Output:
 ![retirees](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/retirement_titles_output.png)
 
 ### Unique &  Most Recent Titles Use Partitioning
@@ -57,7 +57,7 @@ ORDER BY emp_no,title DESC;
 SELECT * FROM unique_titles;
 
 
-EXAMPLES OF EACH OUTPUT
+##### Output:
 ![unique](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/unique_titles_output.png)
 
 ### Aggregate Level
@@ -72,7 +72,7 @@ ORDER BY count(emp_no) DESC;
 
 SELECT * FROM retiring_titles;
 
-EXAMPLES OF EACH OUTPUT
+##### Output:
 ![retirees_emp](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/retiring_titles_output.png)
 
 ### Mentorship
@@ -92,7 +92,7 @@ ORDER BY e.emp_no;
 
 SELECT * FROM mentorship_eligibility;
 
-EXAMPLES OF EACH OUTPUT
+##### Output:
 ![Mentor](https://github.com/yiggzzz/Pewlett-Hackard-Analysis/blob/main/mentorship_output.png)
 
 ### THINGS LEARNED
