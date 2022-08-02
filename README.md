@@ -25,10 +25,9 @@ The following are the findings from the database analysis:
 ![ERD](EmployeeDB.png)
 
 
------------------------------------CODE (Code for the requested queries, with examples of each output)----------------------
+### CODE (Code for the requested queries, with examples of each output)
 
------------------------Get a list of current employees eligible for retirement,including thieir most recent titles----------
-
+#### Get a list of current employees eligible for retirement,including thieir most recent titles
 SELECT e.emp_no, e.first_name, e.last_name, 
 	t.title, t.from_date, t.to_date
 INTO retirement_titles
@@ -43,8 +42,8 @@ SELECT * FROM retirement_titles;
 EXAMPLES OF EACH OUTPUT
 ![retirees](retirement_titles_output.PNG)
 
--------------------------------- Unique &  Most Recent Titles Use Partitioning-------------------------------------------------
-	Get the final list with recent titles, by partitioning the data so that each employee is only included on the list once.
+### Unique &  Most Recent Titles Use Partitioning
+#### Get the final list with recent titles, by partitioning the data so that each employee is only included on the list once.
 
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name,
@@ -61,8 +60,8 @@ SELECT * FROM unique_titles;
 EXAMPLES OF EACH OUTPUT
 ![unique](unique_titles_output.PNG)
 
------------------------------------------------ Aggregate Level--------------------------------------------------------------------
-	In descending order (by date), list the frequency count of employee titles (i.e., how many employees share the same title?)
+### Aggregate Level
+#### In descending order (by date), list the frequency count of employee titles (i.e., how many employees share the same title?)
 
 
 SELECT COUNT(title), title
@@ -76,8 +75,8 @@ SELECT * FROM retiring_titles;
 EXAMPLES OF EACH OUTPUT
 ![retirees_emp](retiring_titles_output.PNG)
 
-----------------------------------------------------Mentorship----------------------------------------------------------------------
-				Should return the potential mentor’s
+### Mentorship
+#### Should return the potential mentor’s
 
 
 SELECT DISTINCT ON (e.emp_no) e.emp_no, e.first_name, e.last_name, e.birth_date,
