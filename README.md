@@ -25,7 +25,7 @@ The following are the findings from the database analysis:
 ![ERD](EmployeeDB.png)
 
 
-### CODE (Code for the requested queries, with examples of each output)
+### CODE
 
 #### Get a list of current employees eligible for retirement,including thieir most recent titles
 SELECT e.emp_no, e.first_name, e.last_name, 
