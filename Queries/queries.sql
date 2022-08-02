@@ -31,13 +31,6 @@ FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
--- Create New Tables from previous queries using the SELECT INTO statement
-SELECT first_name, last_name
-INTO retirement_info
-FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
-AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
-
 -- Create new table for retiring employees
 SELECT emp_no, first_name, last_name
 INTO retirement_info
@@ -49,7 +42,7 @@ AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 SELECT * FROM retirement_info;
 
 --Recreate the retirement_info Table with the emp_no Column. 1st DROP table
---		DROP TABLE retirement_info;
+-- DROP TABLE retirement_info;
 
 -- Create new table for retiring employees
 SELECT emp_no, first_name, last_name
@@ -146,8 +139,8 @@ GROUP BY de.dept_no
 
 -- Create Additional Lists
 -- List 1: Employee Information
-SELECT * FROM salaries
-ORDER BY to_date DESC;
+-- SELECT * FROM salaries
+-- ORDER BY to_date DESC;
 
 -- Employees hired at the current time from the employees table
 -- Table filtered to get the current employees only
@@ -220,7 +213,6 @@ ON re.emp_no = de.emp_no
 INNER JOIN departments as d
 ON d.dept_no = de.dept_no
 WHERE d.dept_name = 'Sales'
-
 
 --Retirees for the Sales & Development depts
 SELECT re.emp_no,
